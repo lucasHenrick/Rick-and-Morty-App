@@ -1,0 +1,51 @@
+<div class="return">
+  <button mat-raised-button class="mat-elevation-z6" routerLink="/" > Voltar </button>
+</div>
+<div class="perfil">
+  <img [src]="chatacter.image" alt="">
+  <h1>
+    {{ chatacter.name }}
+  </h1>
+</div>
+<div class="container">
+  <div class="info card">
+    <!-- <mat-card  class="card"> -->
+      <mat-card-subtitle>Information</mat-card-subtitle>
+      <mat-card-content>
+        <h2> Genero </h2>
+        <span>{{ chatacter.gender }}</span>
+      </mat-card-content>
+      <mat-card-content>
+        <h2> Status </h2>
+        <span>{{ chatacter.status }}</span>
+      </mat-card-content>
+      <mat-card-content>
+        <h2> Specie </h2>
+        <span>{{ chatacter.species }}</span>
+      </mat-card-content>
+      <mat-card-content>
+        <h2> Origin </h2>
+        <span>{{ chatacter.origin?.name }}</span>
+      </mat-card-content>
+      <mat-card-content>
+        <h2> Type </h2>
+        <span>{{ chatacter.type ? chatacter.type : 'unknown' }}</span>
+      </mat-card-content>
+      <mat-card-content>
+        <h2> Location </h2>
+        <span>{{ chatacter.location?.name}}</span>
+      </mat-card-content>
+    <!-- </mat-card> -->
+  </div>
+  <div class="episodio card">
+    <!-- <mat-card  class="card"> -->
+      <mat-card-subtitle>Episode</mat-card-subtitle>
+      <mat-card-content *ngFor="let item of episodio">
+        <h2> {{ item.name }} </h2>
+        <span>{{ item.episode }}</span>
+        <br>
+        <span>{{ item.air_date }}</span>
+      </mat-card-content>
+    <!-- </mat-card> -->
+  </div>
+</div>

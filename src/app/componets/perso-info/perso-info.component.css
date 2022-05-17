@@ -1,0 +1,25 @@
+.perfil {
+  text-align: center;
+}
+.perfil img {
+  border-radius: 50%;
+}
+
+.perfil h1 {
+  margin: 3%;
+  font-size: 3em ;
+}
+
+.container {
+  display: flex ;
+  justify-content: center;
+}
+
+.card {
+  width: 413px;
+}
+
+.return {
+  margin-left: 3%;
+  margin-top: 3%;
+}

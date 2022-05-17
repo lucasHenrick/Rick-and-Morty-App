@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header img {
+  width: 60px;
+  height: 60px;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 10%
+}
+
+a {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .header img {
+    width: 45px;
+    height: 45px;
+  }
+  ul {
+    display: none;
+  }
+}
