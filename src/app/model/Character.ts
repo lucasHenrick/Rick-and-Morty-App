@@ -10,5 +10,6 @@ export interface Chatacter {
   image?:string,
   gender?:string,
   episode: Array<string>
+  episodeInfo?: Array<any>
 }
 

@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  max-width: 300px;
+  width: 300px;
+  margin: 1%;
+  text-align: center;
+}
+
+h2{
+  margin-bottom: 0;
+}
+h3{
+  color: darkgrey;
+  margin-bottom: 0;
+}

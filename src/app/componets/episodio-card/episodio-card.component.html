@@ -1,1 +1,15 @@
-<p>episodio-card works!</p>
+<div class="container">
+  <mat-card *ngFor="let item of episodio"  class="card mat-elevation-z6">
+      <mat-card-content>
+        <h2>
+           {{ item.name }}
+        </h2>
+        <h3>
+          {{ item.air_date }}
+        </h3>
+        <h3>
+          {{ item.episode }}
+        </h3>
+      </mat-card-content>
+  </mat-card>
+</div>

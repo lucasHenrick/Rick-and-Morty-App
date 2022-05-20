@@ -24,22 +24,13 @@ export class PersoInfoComponent implements OnInit {
   ngOnInit(): void {
     const id = this.router.snapshot.paramMap.get('id');
     const url = `https://rickandmortyapi.com/api/character/${id}`;
-    this.service.findCharacter(url).subscribe(
-      (value) => {
-        this.chatacter = value;
-        if(this.chatacter.episode && this.chatacter.episode?.length < 4){
-          this.chatacter.episode.forEach(element =>{
-            this.service.findEpisode(element).subscribe( value => this.episodio.push(value) )
-          }
-          );
-        }
-        else {
-          for (let index = 0; index < 4; index++) {
-            this.service.findEpisode(this.chatacter.episode[index]).subscribe( value => this.episodio.push(value) )
-          }
-        }
+    this.service.findEpisodeByCharacter(url).subscribe(
+      value => {
+        this.chatacter = value
+        this.episodio.push(value.episode);
       }
-    )
+    );
+
   }
 
 }
