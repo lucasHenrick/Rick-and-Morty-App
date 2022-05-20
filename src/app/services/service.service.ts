@@ -1,8 +1,8 @@
 import { Chatacter } from './../model/Character';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { forkJoin, Observable } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +19,19 @@ export class ServiceService {
     );
   }
 
-  public findEpisode(url: string): Observable<Array<any>> {
-    return this.http.get<any>(url);
+  public findEpisodeByCharacter(url: string): Observable<any> {
+   return this.http.get<any>(url).pipe(
+      switchMap(value => new Observable(observer => {
+        forkJoin(value.episode.map(
+          (episode: string) => this.http.get(episode)
+            .subscribe(ep => {
+              value.episode = ep
+              observer.next(value);
+            })
+          )
+          )
+      }))
+      );
   }
 
   public findCharacter(url: string): Observable<Chatacter> {
