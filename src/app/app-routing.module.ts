@@ -1,3 +1,4 @@
+import { EpisodioInfoComponent } from './componets/episodio-info/episodio-info.component';
 import { EpisodioListComponent } from './componets/episodio-list/episodio-list.component';
 import { PersoInfoComponent } from './componets/perso-info/perso-info.component';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:"episodios",
     component:EpisodioListComponent
+  },
+  {
+    path:"episodios/episodio/:id",
+    component:EpisodioInfoComponent
   }
 ];
 
