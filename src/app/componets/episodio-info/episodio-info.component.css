@@ -1,0 +1,16 @@
+h1{
+  text-align: center;
+  margin: 1.2em;
+  font-size: 3em;
+}
+.container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h3 {
+  color: darkgrey;
+}
+.card-container h1{
+  color: darkgray;
+}

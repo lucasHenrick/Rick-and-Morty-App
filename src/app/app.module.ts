@@ -18,6 +18,7 @@ import { PersoInfoComponent } from './componets/perso-info/perso-info.component'
 import { FooterComponent } from './componets/footer/footer.component';
 import { EpisodioCardComponent } from './componets/episodio-card/episodio-card.component';
 import { EpisodioListComponent } from './componets/episodio-list/episodio-list.component';
+import { EpisodioInfoComponent } from './componets/episodio-info/episodio-info.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EpisodioListComponent } from './componets/episodio-list/episodio-list.c
     PersoInfoComponent,
     FooterComponent,
     EpisodioCardComponent,
-    EpisodioListComponent
+    EpisodioListComponent,
+    EpisodioInfoComponent
   ],
   imports: [
     BrowserModule,

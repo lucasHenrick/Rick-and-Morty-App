@@ -1,5 +1,5 @@
 <div class="container">
-  <mat-card *ngFor="let item of episodio"  class="card mat-elevation-z6">
+  <mat-card *ngFor="let item of episodio"  class="card mat-elevation-z6"  routerLink="episodio/{{ item.id }}">
       <mat-card-content>
         <h2>
            {{ item.name }}

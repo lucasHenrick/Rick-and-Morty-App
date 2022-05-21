@@ -1,0 +1,16 @@
+<h1> {{ episodio.name }} </h1>
+<div class="container">
+    <div class="episodio">
+        <h2>Episodio</h2>
+        <h3>{{ episodio.episode}}</h3>
+    </div>
+    <div class="data">
+        <h2>Data</h2>
+        <h3>{{ episodio.air_date }}</h3>
+    </div>
+</div>
+
+<div class="card-container">
+  <h1>Characters</h1>
+  <app-perso-card [chatacters]="characters" ></app-perso-card>
+</div>

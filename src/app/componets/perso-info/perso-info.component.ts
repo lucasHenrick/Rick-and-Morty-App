@@ -1,3 +1,4 @@
+import { Episodio } from 'src/app/model/Episodio';
 import { ServiceService } from './../../services/service.service';
 import { Chatacter } from './../../model/Character';
 import { Component, Input, OnInit } from '@angular/core';
@@ -19,7 +20,7 @@ export class PersoInfoComponent implements OnInit {
     "episode": [ ],
 
   };
-  public episodio: Array<any> = [];
+  public episodio: Array<Episodio> = [];
 
   ngOnInit(): void {
     const id = this.router.snapshot.paramMap.get('id');
