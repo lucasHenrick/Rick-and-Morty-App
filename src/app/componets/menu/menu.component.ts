@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  public active: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public openSidenave(): void {
+    this.active = this.active !== '' ? ''  :'active';
   }
 
 }

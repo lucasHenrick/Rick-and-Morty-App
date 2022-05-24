@@ -1,22 +1,21 @@
-<mat-toolbar class="header mat-elevation-z6">
-  <img src="../../../assets/img/logo-black.png" alt="logo">
-
-  <nav>
-    <ul>
-      <li>
-        <a class="menu-buttom" routerLink="/"> Personagens </a>
-      </li>
-      <li>
-        <a class="menu-buttom">
-          Locais
-        </a>
-      </li>
-      <li>
-        <a class="menu-buttom" routerLink="/episodios">
-          Episodios
-        </a>
-      </li>
-    </ul>
+    <nav class="navbar mat-elevation-z6">
+      <img src="../../../assets/img/logo-black.png" alt="logo">
+      <a href="#" class="toggle-button" (click)="openSidenave()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </a>
+      <div [ngClass]="['navbar-link',active]">
+        <ul>
+          <li>
+            <a class="menu-buttom" routerLink="/"> Personagens </a>
+          </li>
+          <li>
+            <a class="menu-buttom " routerLink="/locais">Locais</a>
+          </li>
+          <li>
+            <a class="menu-buttom" routerLink="/episodios">Episodios</a>
+          </li>
+        </ul>
+      </div>
   </nav>
-</mat-toolbar>
-
