@@ -19,6 +19,9 @@ import { FooterComponent } from './componets/footer/footer.component';
 import { EpisodioCardComponent } from './componets/episodio-card/episodio-card.component';
 import { EpisodioListComponent } from './componets/episodio-list/episodio-list.component';
 import { EpisodioInfoComponent } from './componets/episodio-info/episodio-info.component';
+import { LocaisCardComponent } from './componets/locais-card/locais-card.component';
+import { LocaisListComponent } from './componets/locais-list/locais-list.component';
+import { LocaisInfoComponent } from './componets/locais-info/locais-info.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { EpisodioInfoComponent } from './componets/episodio-info/episodio-info.c
     FooterComponent,
     EpisodioCardComponent,
     EpisodioListComponent,
-    EpisodioInfoComponent
+    EpisodioInfoComponent,
+    LocaisCardComponent,
+    LocaisListComponent,
+    LocaisInfoComponent
   ],
   imports: [
     BrowserModule,
