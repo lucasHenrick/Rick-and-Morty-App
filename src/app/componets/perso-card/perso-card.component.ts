@@ -1,6 +1,7 @@
 import { Chatacter } from './../../model/Character';
 import { ServiceService } from './../../services/service.service';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perso-card',
@@ -9,12 +10,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PersoCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
   @Input()
   public chatacters: Array<Chatacter> = [];
 
   ngOnInit(): void {
 
+  }
+
+  public routerInfo(id: any): void {
+    this.router.navigate([`character/${id}`])
   }
 
 }

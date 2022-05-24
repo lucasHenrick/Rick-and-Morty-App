@@ -1,5 +1,5 @@
 <div class="container">
-  <mat-card *ngFor="let item of chatacters"  class="card mat-elevation-z6" routerLink="character/{{ item.id }}" >
+  <mat-card *ngFor="let item of chatacters"  class="card mat-elevation-z6" (click)="routerInfo(item.id)" >
       <img  mat-card-image [src]="item.image">
       <mat-card-content>
         <h2 >
