@@ -1,0 +1,12 @@
+<div class="container">
+  <mat-card *ngFor="let item of locais"  class="card mat-elevation-z6"  routerLink="local/{{ item.id }}">
+      <mat-card-content>
+        <h2>
+           {{ item.name }}
+        </h2>
+        <h3>
+          {{ item.type }}
+        </h3>
+      </mat-card-content>
+  </mat-card>
+</div>

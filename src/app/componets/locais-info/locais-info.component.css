@@ -1,0 +1,19 @@
+.return {
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+h1{
+  text-align: center;
+  margin: 1.2em;
+  font-size: 3em;
+}
+.container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h3 {
+  color: darkgrey;
+}
+

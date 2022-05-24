@@ -1,0 +1,21 @@
+<div class="return">
+  <button mat-raised-button class="mat-elevation-z6" routerLink="../../" > Voltar </button>
+</div>
+<h1> {{ locations.name }} </h1>
+<div class="container">
+    <div class="type">
+        <h2>Type</h2>
+        <h3>{{ locations.type}}</h3>
+    </div>
+    <div class="data">
+        <h2>Dimensão</h2>
+        <h3>{{ locations.dimension }}</h3>
+    </div>
+</div>
+<div class="card-container">
+  <h1>Characters</h1>
+  <app-perso-card *ngIf="characters else notFound" [chatacters]="characters" ></app-perso-card>
+  <ng-template #notFound>
+    <h1>Não Há Personagens</h1>
+  </ng-template>
+</div>
