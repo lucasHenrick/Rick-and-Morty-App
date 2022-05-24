@@ -16,10 +16,31 @@
 }
 
 .card {
-  width: 413px;
+  width: 20%;
 }
 
 .return {
   margin-left: 3%;
   margin-top: 3%;
 }
+
+@media only screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .info-card {
+    text-align: center;
+  }
+  .episodio-card {
+    text-align: center;
+  }
+  .episodio-card h1 {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .card {
+    width: auto;
+  }
+}
+
